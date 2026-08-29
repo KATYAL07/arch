@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-26T09:55:52.406Z",
+  "entries": [
+    "antigravity-agent-manager",
+    "antigravity-skill-orchestrator",
+    "antigravity-workflows",
+    "audit-skills",
+    "docs",
+    "effective-agent-skills",
+    "manage-skills"
+  ]
+}
