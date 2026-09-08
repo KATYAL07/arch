@@ -6,6 +6,27 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ---- Hero letter hover animation ---- */
+.hover-letter {
+  display: inline-block;
+  transition: transform 0.12s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.12s ease;
+  cursor: default;
+  color: #ffffff;
+}
+.hover-letter:hover {
+  transform: translateY(-10px);
+  color: #10B981; /* Soft emerald */
+}
+.hover-letter.space {
+  min-width: 0.35em;
+}
+
 /* ---- Fade-in on scroll ---- */
 .fade-section {
   opacity: 0;
@@ -17,37 +38,52 @@ html {
   transform: translateY(0);
 }
 
-/* ---- Hero gradient ---- */
-.hero-gradient {
-  background: linear-gradient(135deg, #006064 0%, #00796b 40%, #1b5e20 100%);
+/* ---- Button: outline (white text, emerald border → invert on hover) ---- */
+.btn-outline {
+  background: transparent;
+  color: #ffffff;
+  border: 1.5px solid #10B981;
+  border-radius: 9999px;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.btn-outline:hover {
+  background: #10B981;
+  color: #000000;
 }
 
-/* ---- Glass card ---- */
-.glass-card {
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+/* ---- Button: filled (black text on emerald → invert on hover) ---- */
+.btn-filled {
+  background: #10B981;
+  color: #000000;
+  border: 1.5px solid #10B981;
+  border-radius: 9999px;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.btn-filled:hover {
+  background: transparent;
+  color: #10B981;
 }
 
-/* ---- Floating animation ---- */
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-16px); }
-}
-.animate-float {
-  animation: float 4s ease-in-out infinite;
+/* ---- Heading font ---- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Syne', sans-serif;
+  color: #ffffff;
 }
 
-/* ---- Shimmer ---- */
-@keyframes shimmer {
-  0%   { background-position: -200% center; }
-  100% { background-position: 200% center; }
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar {
+  width: 4px;
 }
-.animate-shimmer {
-  background: linear-gradient(90deg, #00bcd4 25%, #80deea 50%, #00bcd4 75%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 3s linear infinite;
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #10B981;
+  border-radius: 9999px;
 }
