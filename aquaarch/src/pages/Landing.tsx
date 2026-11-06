@@ -60,10 +60,10 @@ function InteractiveText({ text, className = '' }: { text: string; className?: s
 
 export default function Landing() {
   const homeTags = [
-    { text: 'Ocean-Grown Algae', className: 'bg-stone-200 text-black' },
-    { text: '60-Day Compostable', className: 'bg-cyan-300 text-black' },
-    { text: 'Zero Microplastics', className: 'bg-teal-300 text-black' },
-    { text: 'Custom Arch Support', className: 'bg-amber-100 text-black' },
+    { text: 'Ocean-Grown Algae', background: '#e7e5e4', color: '#000000' },
+    { text: '60-Day Compostable', background: '#67e8f9', color: '#000000' },
+    { text: 'Zero Microplastics', background: '#5eead4', color: '#000000' },
+    { text: 'Custom Arch Support', background: '#fef3c7', color: '#000000' },
   ];
   const navigate = useNavigate();
 

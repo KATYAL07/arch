@@ -1,7 +1,11 @@
 'use client';
 
-import React from 'react';
 import HeroScrollVideoReveal from './hero-scroll-video-pin-reveal';
+import ProgressIndicator from './progress-indicator';
+
+export function ProgressIndicatorDemo() {
+  return <ProgressIndicator />;
+}
 
 export default function HeroScrollVideoRevealDemo() {
   return (
